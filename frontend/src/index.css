@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Set full page background */
+html,
+body,
+#root {
+  @apply bg-rose-100 h-full;
+  margin: 0;
+  padding: 0;
+}
+
+.backgroundColor {
+  background-color: #874ccc;
+}
