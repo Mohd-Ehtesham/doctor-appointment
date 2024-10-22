@@ -41,8 +41,8 @@ export default function BookAnAppointment() {
   }
 
   return (
-    <div className="px-4 sm:px-0">
-      <div className="flex flex-col bg-pink-200 mt-10 mx-auto p-6 rounded-lg shadow-md xl:mt-[10rem] lg:w-3/4 md:w-4/6 sm:w-11/12 sm:ms-28 lg:mt-28 md:mt-32 sm:mt-[12rem]">
+    <div className="px-4 sm:px-0 sm:mt-10">
+      <div className="flex flex-col bg-pink-200 mt-40 mx-auto p-6 rounded-lg shadow-md xl:mt-[10rem] lg:w-3/4 md:w-4/6 sm:w-11/12 sm:ms-28 lg:mt-28 md:mt-32 sm:mt-[12rem]">
         <div className="my-4">
           <h3 className="text-center text-xl sm:text-2xl font-bold">
             Book An Appointment

@@ -21,7 +21,9 @@ export const getAppointmentFailure = (error) => ({
 export const getAppointment = () => async (dispatch) => {
   dispatch(getAppointmentRequest());
   try {
-    const response = await axios.get("http://localhost:8000/appointment");
+    const response = await axios.get(
+      "https://doctor-appointment-loir.onrender.com/appointment"
+    );
     const data = response.data.appointment;
     dispatch(getAppointmentSuccess(data));
     console.log("Get Appointment Data:", data);

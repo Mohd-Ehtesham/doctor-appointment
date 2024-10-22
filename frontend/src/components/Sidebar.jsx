@@ -29,7 +29,7 @@ export default function Sidebar() {
   return (
     <>
       {isSidebarOpen && (
-        <aside className="fixed left-0 top-36 bg-pink-200 h-full w-36 p-5 md:w-44 md:top-28 lg:w-52 lg:top-24 xl:w-60 2xl:w-72 2xl:top-16 2xl:p-10">
+        <aside className="fixed left-0 top-0 bg-pink-200 h-full p-5 md:top-28 lg:top-24 w-96 2xl:top-16 2xl:p-10">
           <ul className="space-y-4 flex flex-col justify-center items-center mt-[4rem]">
             <li>
               <img
@@ -38,15 +38,15 @@ export default function Sidebar() {
                 className="w-[10rem] h-[10rem] rounded-full"
               />
             </li>
-            <li className="text-[8px] font-semibold hover:bg-pink-300 px-4 rounded-lg md:text-xs lg:text-lg">
+            <li className="font-semibold hover:bg-pink-300 px-4 rounded-lg">
               {userDetails?.email}
             </li>
-            <li className="text-[6px] font-semibold hover:bg-pink-300 px-4 rounded-lg md:text-[10px] lg:text-sm">
+            <li className="font-semibold hover:bg-pink-300 px-4 rounded-lg">
               {userDetails?.name}
             </li>
             <li
               onClick={handleRoleClick}
-              className="text-[8px] font-semibold hover:bg-pink-300 px-4 rounded-lg md:text-xs lg:text-lg"
+              className="font-semibold hover:bg-pink-300 px-4 rounded-lg"
             >
               {userDetails?.role}
             </li>

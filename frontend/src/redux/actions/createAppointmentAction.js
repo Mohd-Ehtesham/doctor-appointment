@@ -25,7 +25,7 @@ export const createAppointment = (appointmentData) => async (dispatch) => {
     const token = localStorage.getItem("token");
     console.log(token);
     const response = await axios.post(
-      "http://localhost:8000/appointment",
+      "https://doctor-appointment-loir.onrender.com/appointment",
       appointmentData,
       {
         headers: {

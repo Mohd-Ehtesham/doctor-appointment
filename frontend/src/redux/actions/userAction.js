@@ -32,11 +32,14 @@ export const fetchUser = () => {
         return;
       }
 
-      const response = await axios.get("http://localhost:8000/protected", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await axios.get(
+        "https://doctor-appointment-loir.onrender.com/protected",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       const data = response.data;
       console.log(data);

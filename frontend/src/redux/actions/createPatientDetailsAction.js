@@ -23,7 +23,7 @@ export const createPatient = (patientData) => async (dispatch) => {
   dispatch(createPatientDetailsRequest());
   try {
     const response = await axios.post(
-      "http://localhost:8000/patient",
+      "https://doctor-appointment-loir.onrender.com/patient",
       patientData,
       {
         headers: {

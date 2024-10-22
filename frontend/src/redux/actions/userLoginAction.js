@@ -23,11 +23,15 @@ export const loginUser = (userData) => async (dispatch) => {
   dispatch(loginRequest());
 
   try {
-    const response = await axios.post("http://localhost:8000/login", userData, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await axios.post(
+      "https://doctor-appointment-loir.onrender.com/login",
+      userData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const data = response.data; // Axios automatically parses JSON
     console.log(data);

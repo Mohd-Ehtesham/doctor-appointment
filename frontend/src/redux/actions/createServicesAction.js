@@ -25,7 +25,7 @@ export const createService = (serviceData) => async (dispatch) => {
     const token = localStorage.getItem("token");
     console.log(token);
     const response = await axios.post(
-      "http://localhost:8000/services",
+      "https://doctor-appointment-loir.onrender.com/services",
       serviceData,
       {
         headers: {
@@ -37,7 +37,7 @@ export const createService = (serviceData) => async (dispatch) => {
     const data = response.data.service;
     console.log("Service Data:", data);
     // Dispatch success action with the response data
-    dispatch(createServiceRequest(data));
+    dispatch(createServiceSuccess(data)); // <-- Correct action
     // Return the data for use in the component
     toast.success("New Appointment is created 😁...");
     return data;

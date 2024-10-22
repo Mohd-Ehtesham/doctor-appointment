@@ -24,7 +24,7 @@ export const registerUser = (userData) => async (dispatch) => {
   dispatch(registerRequest());
   try {
     const response = await axios.post(
-      "http://localhost:8000/register",
+      "https://doctor-appointment-loir.onrender.com/register",
       userData,
       {
         headers: {

@@ -21,7 +21,9 @@ export const getServicesFailure = (error) => ({
 export const getService = () => async (dispatch) => {
   dispatch(getServicesRequest());
   try {
-    const response = await axios.get("http://localhost:8000/services");
+    const response = await axios.get(
+      "https://doctor-appointment-loir.onrender.com/services"
+    );
     const data = response.data.services;
     dispatch(getServicesSuccess(data));
     // Log the API response
