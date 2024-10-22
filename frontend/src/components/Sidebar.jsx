@@ -2,6 +2,8 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
+import { FaUserLarge } from "react-icons/fa6";
+
 export default function Sidebar() {
   const navigate = useNavigate();
   const userDetails = useSelector((state) => state.login.userDetails);
@@ -30,7 +32,7 @@ export default function Sidebar() {
     <>
       {isSidebarOpen && (
         <aside className="fixed left-0 top-0 bg-pink-200 h-full p-5 md:top-28 lg:top-24 w-96 2xl:top-16 2xl:p-10">
-          <ul className="space-y-4 flex flex-col justify-center items-center mt-[4rem]">
+          <ul className="space-y-2 flex flex-col justify-center items-center mt-[4rem]">
             <li>
               <img
                 src="/nora.jpeg"
@@ -38,24 +40,27 @@ export default function Sidebar() {
                 className="w-[10rem] h-[10rem] rounded-full"
               />
             </li>
-            <li className="font-semibold hover:bg-pink-300 px-4 rounded-lg">
-              {userDetails?.email}
-            </li>
-            <li className="font-semibold hover:bg-pink-300 px-4 rounded-lg">
-              {userDetails?.name}
-            </li>
             <li
               onClick={handleRoleClick}
               className="font-semibold hover:bg-pink-300 px-4 rounded-lg"
             >
               {userDetails?.role}
             </li>
-            <button
-              onClick={logout}
-              className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 text-[6px] lg:text-lg"
-            >
-              Log Out
-            </button>
+            <li className="font-semibold hover:bg-pink-300 px-4 rounded-lg">
+              {userDetails?.email}
+            </li>
+            <li className="font-semibold hover:bg-pink-300 px-4 rounded-lg">
+              {userDetails?.name}
+            </li>
+            <div className="flex justify-around items-baseline gap-3">
+              <FaUserLarge className="" />
+              <button
+                onClick={logout}
+                className="mt-4 px-5 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600 text-[6px] lg:text-lg"
+              >
+                Log Out
+              </button>
+            </div>
           </ul>
         </aside>
       )}

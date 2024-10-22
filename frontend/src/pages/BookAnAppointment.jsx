@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import { createAppointment } from "../redux/actions/createAppointmentAction";
 
+import { HiOutlineUpload } from "react-icons/hi";
+
 export default function BookAnAppointment() {
   const dispatch = useDispatch();
 
@@ -132,8 +134,9 @@ export default function BookAnAppointment() {
           {/* Upload Reports */}
           <label
             htmlFor="uploadFile"
-            className="block mb-2 font-semibold text-gray-700"
+            className="mb-2 font-semibold text-gray-700 flex justify-center items-center"
           >
+            <HiOutlineUpload />
             Upload Reports
           </label>
           <input

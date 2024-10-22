@@ -8,7 +8,12 @@ export default function AppointmentDetails({ appointment }) {
   );
 
   return (
-    <div className="flex flex-col shadow-lg rounded-lg overflow-hidden w-[30rem] max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl m-4 bg-white mt-16">
+    <div className="relative flex flex-col shadow-lg rounded-lg overflow-hidden w-[30rem] max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl m-4 bg-white mt-16">
+      {/* Absolute positioned date in the top-right corner */}
+      <p className="absolute top-4 right-4 text-blue-700 font-extrabold text-right text-sm md:text-lg lg:text-xl">
+        {formattedDate}
+      </p>
+
       {/* Image */}
       <img
         className="h-52 md:h-60 lg:h-96 w-full object-cover"
@@ -16,12 +21,10 @@ export default function AppointmentDetails({ appointment }) {
         alt="loading..."
       />
 
-      {/* Appointment details in a flex-wrap container */}
+      {/* Appointment details */}
       <div className="flex flex-wrap justify-between items-center bg-blue-400 p-5 md:p-6 lg:p-7">
-        <div className="flex flex-col">
-          <p className="text-blue-700 font-extrabold text-right text-base md:text-lg lg:text-xl">
-            {formattedDate}
-          </p>
+        {/* Doctor and Patient details */}
+        <div className="flex flex-col mt-4">
           <h3 className="text-white font-bold mt-2 text-base md:text-lg lg:text-xl">
             Doctor Details
           </h3>

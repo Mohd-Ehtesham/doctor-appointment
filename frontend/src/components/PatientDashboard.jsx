@@ -50,7 +50,7 @@ export default function PatientDashboard() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center p-5 gap-10">
+    <div className="flex flex-col justify-center items-center mt-28 p-5 gap-10">
       <header className="text-lg sm:text-2xl font-bold">
         Patient Dashboard
       </header>
